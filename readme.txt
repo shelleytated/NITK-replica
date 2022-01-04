@@ -22,7 +22,7 @@ Python FLASK Framework
 DATABASE:
 SQLAlchemy- A python SQL toolkit
 
-We have hosted our website usinh heroku client:
+We have hosted our website using heroku client:
 Link: https://shelley-cse-webapp.herokuapp.com/
 
 Within nitk_cse we have 3 folders : 
