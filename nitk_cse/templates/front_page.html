@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.column1 {
+  float: left;
+  width: 33.33%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row1:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+</style>
+
+
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0">
+	<title>front_page</title>
+		<!-- Start css3menu.com HEAD section -->
+	<link rel="stylesheet" href="../static/menu11_files/css3menu1/style.css" type="text/css" /><style type="text/css">._css3m{display:none}</style>
+	<!-- End css3menu.com HEAD section -->
+
+
+
+<!-- Start WOWSlider.com HEAD section -->
+<link rel="stylesheet" type="text/css" href="../static/engine1/style.css" />
+<script type="text/javascript" src="../static/engine1/jquery.js"></script>
+<!-- End WOWSlider.com HEAD section -->
+
+<meta name="viewport" content="initial-scale=1.0">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+
+</head>
+<body>
+<div class="homepage">
+<div class="about">
+
+<h2 style="background-color:MidnightBlue;color:white;">registrar@nitk.ac.in &nbsp &nbsp 0824&nbsp247&nbsp4000</h2>
+
+<br>
+<img src="../static/header.png" width=100%>
+
+
+<body ontouchstart="" style="background-color:#EBEBEB;width=100%;">
+<!-- Start css3menu.com BODY section -->
+<input type="checkbox" id="css3menu-switcher" class="c3m-switch-input">
+<ul id="css3menu1" class="topmenu">
+	<li class="switch"><label onclick="" for="css3menu-switcher"></label></li>
+	<li class="topfirst"><a href="#" style="height:32px;line-height:32px;">Home</a></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Institute</span></a>
+	<ul>
+		<li><a href="#"><span>History</span></a>
+		<ul>
+			<li><a href="#">Former Principles</a></li>
+			<li><a href="#">Former Directors</a></li>
+			<li><a href="#">Milestones</a></li>
+		</ul></li>
+		<li><a href="#"><span>Campus</span></a>
+		<ul>
+			<li><a href="#">Virtual Campus Tour</a></li>
+			<li><a href="#">Campus Amenities</a></li>
+			<li><a href="#">Working Hours</a></li>
+			<li><a href="#">How To Reach</a></li>
+		</ul></li>
+		<li><a href="#">Contact Us</a></li>
+		<li><a href="#">Institute Brochure</a></li>
+		<li><a href="#">About Us</a></li>
+		<li><a href="#">Awards &amp; Recognitions</a></li>
+		<li><a href="#">Events Calender</a></li>
+		<li><a href="#"><span>Institute Newsletter</span></a>
+		<ul>
+			<li><a href="#">Institute Newsletter </a></li>
+		</ul></li>
+		<li><a href="#">Gallery</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Administration</span></a>
+	<ul>
+		<li><a href="#">Organizational Chart</a></li>
+		<li><a href="#"><span>Governing Bodies</span></a>
+		<ul>
+			<li><a href="#">The Senate</a></li>
+			<li><a href="#">NIT Council</a></li>
+			<li><a href="#">Board Of Governers</a></li>
+			<li><a href="#">Finance Committee</a></li>
+			<li><a href="#">Building and Works Committee</a></li>
+		</ul></li>
+		<li><a href="#">Visitor</a></li>
+		<li><a href="#">Chairperson</a></li>
+		<li><a href="#">Director</a></li>
+		<li><a href="#">Deputy Director</a></li>
+		<li><a href="#">Register</a></li>
+		<li><a href="#">Deans</a></li>
+		<li><a href="#">Administrative Officers</a></li>
+		<li><a href="#"><span>Public Disclosures</span></a>
+		<ul>
+			<li><a href="#">RTI</a></li>
+			<li><a href="#">IPR</a></li>
+			<li><a href="#">IT policy</a></li>
+			<li><a href="#">RTI Officials</a></li>
+			<li><a href="#">Accessibility</a></li>
+			<li><a href="#">CVO</a></li>
+		</ul></li>
+		<li><a href="#">Heads of Departments/Centres</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Academics</span></a>
+	<ul>
+		<li><a href="#">Academic Office</a></li>
+		<li><a href="#"><span>Programs</span></a>
+		<ul>
+			<li><a href="#">PG Programmes</a></li>
+			<li><a href="#">UG Programmes</a></li>
+			<li><a href="#">PhD Research Programmes</a></li>
+			<li><a href="#">M.Tech Research Programmes</a></li>
+		</ul></li>
+		<li><a href="#">Regulation and Curriculum</a></li>
+		<li><a href="#">Academic Calender</a></li>
+		<li><a href="{{ url_for('department') }}">Departments</a></li>
+		<li><a href="#">Admission Procedure</a></li>
+		<li><a href="#">Scholarships and Awards</a></li>
+		<li><a href="#">Fee Structure</a></li>
+		<li><a href="#">Convocation</a></li>
+		<li><a href="#">Notices and Forms</a></li>
+		<li><a href="#">Certificates &amp; Transcripts</a></li>
+		<li><a href="#">&nbsp</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Research</span></a>
+	<ul>
+		<li><a href="#">Overview</a></li>
+		<li><a href="#">Research Areas </a></li>
+		<li><a href="#"><span>Centres</span></a>
+		<ul>
+			<li><a href="#">Central Research Facility</a></li>
+			<li><a href="#">Centre For Continuing Education</a></li>
+			<li><a href="#">Industry Institute Partnership</a></li>
+		</ul></li>
+		<li><a href="#">Sponsored Research</a></li>
+		<li><a href="#">Publications</a></li>
+		<li><a href="#">Research Facility</a></li>
+		<li><a href="#">Institutional Relations</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Facilities</span></a>
+	<ul>
+		<li><a href="#">Library</a></li>
+		<li><a href="#">Central Research Facility</a></li>
+		<li><a href="#">Career Development Centre</a></li>
+		<li><a href="#">Central Computer Centre</a></li>
+		<li><a href="#">Health Care Centre</a></li>
+		<li><a href="#">Guest House</a></li>
+		<li><a href="#">Campus Amenities</a></li>
+		<li><a href="#"><span>Grievances</span></a>
+		<ul>
+			<li><a href="#">PwD</a></li>
+			<li><a href="#">SC/ST</a></li>
+			<li><a href="#">OBC</a></li>
+			<li><a href="#">Internal Complaints</a></li>
+		</ul></li>
+		<li><a href="#">Resident Engineer Office</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Student Life</span></a>
+	<ul>
+		<li><a href="#">Overview</a></li>
+		<li><a href="#">Students Council</a></li>
+		<li><a href="#">Activities</a></li>
+		<li><a href="#">NSS</a></li>
+		<li><a href="#">NCC</a></li>
+		<li><a href="#">Sports and Games</a></li>
+		<li><a href="#">Alumni</a></li>
+		<li><a href="#">Achievements</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Ranking</span></a>
+	<ul>
+		<li><a href="#">ARIIA</a></li>
+		<li><a href="#">NIRF</a></li>
+	</ul></li>
+	<li class="topmenu"><a href="#" style="height:32px;line-height:32px;"><span>Careers</span></a>
+	<ul>
+		<li><a href="#">Tenders</a></li>
+		<li><a href="#">Teaching Positions</a></li>
+		<li><a href="#">Non-Teaching Positions</a></li>
+	</ul></li>
+	<li class="toplast"><a href="#" style="height:32px;line-height:32px;"><img src="../static/menu11_files/css3menu1/find1.png" alt=""/>&nbsp</a></li>
+</ul><p class="_css3m"><a href="http://css3menu.com/">drop down menu</a> by Css3Menu.com</p>
+<!-- End css3menu.com BODY section -->
+
+<br><br>
+
+
+<!-- Start WOWSlider.com BODY section -->
+<div id="wowslider-container1">
+<div class="ws_images"><ul>
+		<li><img src="../static/data1/images/b1.jpg" alt="b1" title="b1" id="wows1_0"/></li>
+		<li><img src="../static/data1/images/b3.jpg" alt="b3" title="b3" id="wows1_1"/></li>
+		<li><a href="http://wowslider.net"><img src="../static/data1/images/b4.jpg" alt="jquery slideshow" title="b4" id="wows1_2"/></a></li>
+		<li><img src="../static/data1/images/b5.jpg" alt="b5" title="b5" id="wows1_3"/></li>
+	</ul></div>
+	<div class="ws_bullets"><div>
+		<a href="#" title="b1"><span><img src="../static/data1/tooltips/b1.jpg" alt="b1"/>1</span></a>
+		<a href="#" title="b3"><span><img src="../static/data1/tooltips/b3.jpg" alt="b3"/>2</span></a>
+		<a href="#" title="b4"><span><img src="../static/data1/tooltips/b4.jpg" alt="b4"/>3</span></a>
+		<a href="#" title="b5"><span><img src="../static/data1/tooltips/b5.jpg" alt="b5"/>4</span></a>
+	</div></div><div class="ws_script" style="position:absolute;left:-99%"><a href="http://wowslider.net">css image slider</a> by WOWSlider.com v8.8</div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="../static/engine1/wowslider.js"></script>
+<script type="text/javascript" src="../static/engine1/script.js"></script>
+<!-- End WOWSlider.com BODY section -->
+
+<img src="../static/Capture.PNG" width=100%>
+
+
+<div class="row1">
+  <div class="column1" style="background-color: white">
+    <h2 style="color: darkblue">Rankings</h2><hr height: 12px width: 5px>
+    <h4 style="color: darkgreen">10 Rank:  NIRF Engineering</h4>
+     <br>
+    <h4 style="color: darkgreen">32 Rank:  NIRF Overall</h4>
+    <br>
+    <h4 style="color: darkgreen">63 Rank:  QS India</h4>
+   <br>
+<a href="https://www.nitk.ac.in/awards--recognitions"  style="text-decoration: none;"><b>View all Rankings --></b></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
+
+
+
+  <div class="column1" style="background-color: white">
+  <h2 style="color: darkblue">News and Updates</h2><hr height: 12px width:5px>
+ <b> NOV 12, 2021</b><br>
+<a href="https://www.nitk.ac.in/nitk-faculty-researchers-in-stanford-university-list-of-top-2-scientist" style: "color: black"> <h6>NITK Faculty Researchers in Stanford University List of Top 2% Scientist</h6></a> 
+<br>
+<b> NOV 03, 2021</b><br>
+<a href="https://www.nitk.ac.in/doctor-of-science-for-sri-suhas-yathiraj--an-interview-with-hi" style: "color: black"> <h6>Doctor of Science for Sri Suhas Yathiraj & an interview with him</h6></a> 
+<hr>
+ <b> JAN 04, 2022</b><br>
+<a href="https://www.nitk.ac.in/dr-vinoth-srinivasan-has-received-grant-under-start-research-grantsrg" style: "color: black"> <h6>Dr. Vinoth Srinivasan has received grant under Start Research Grant(SRG)</h6></a> 
+<br>
+ <b> DEC 30, 2021</b><br>
+<a href="https://www.nitk.ac.in/nitk-faculty-researchers-in-stanford-university-list-of-top-2-scientist" style: "color: black"> <h6>Best Paper Award to Dr. Biswajit R Bhowmik at the 18th IEEE INDICON 2021</h6></a> 
+<br>
+<a href="https://www.nitk.ac.in/news"  style="text-decoration: none;"><b>View all News --></b></a>
+  </div>
+
+
+  <div class="column1" style="background-color: white">
+   <h1 style="color: darkblue">Announcements</h1>
+<hr>
+<b> DEC 25, 2021</b><br>
+<a href="https://www.nitk.ac.in/ATTENTION-FIRST%20YEAR%20B.TECH%20STUDENTS%20AY-2021-22"> <h6>ATTENTION-FIRST YEAR B.TECH STUDENTS AY-2021-22</h6></a> 
+<br>
+<b> DEC 18, 2021</b><br>
+<a href="https://www.nitk.ac.in/academicresearch-activities-for-pg--phd" style: "color: black"> <h6>Academic/research activities for PG & PhD students in the even semester</h6></a> 
+<hr>
+<b> DEC 24, 2021</b><br>
+<a href="https://www.nitk.ac.in/Project%20Associate%20Advertisement%20for%20SERB-SRG%20project%20in%20Chemistry" style: "color: black"> <h6>Project Associate Advertisement for SERB-SRG project in Chemistry</h6></a> 
+<br>
+<b> DEC 21, 2021</b><br>
+<a href="https://www.nitk.ac.in/fee-payment-for-the--even-semester-2021-22-instructions-wrt-payment-" style: "color: black"> <h6>FEE PAYMENT FOR THE EVEN SEMESTER 2021-22(Instructions w.r.t payment)</h6></a> 
+<br>
+<a href="https://www.nitk.ac.in/announcements"  style="text-decoration: none;"><b>View all Announcements --></b></a>
+</div>
+</div>
+</div>
+
+<br><br>
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br>
+<h2 style="color:Blue;">Upcoming Events</h2>
+
+
+<div class="row">
+  <div class="column" style="background-color:white;">
+    <h2 style="color:Green;">30 MAY</h2>
+    <p><h3 style="color:Blue;">7-Days Advanced Topics SERB Sponsored Workshop on Advanced Topics in Network Security and Cryptography</h3></p>
+    <p><h4 style="color:Green;">Starts: 30/05/2022<br>Ends: 05/06/2022</h4></p>
+
+ </div>
+  <div class="column" style="background-color:white;">
+    <h2 style="color:Green;">09 JUN</h2>
+    <p><h3 style="color:Blue;">2nd International Conference on Computational Electronics for Wireless Communications(ICCWC-2022)</h3></p>
+    <p><h4 style="color:Green;">Starts: 09/06/2022<br>Ends: 10/06/2022</h4></p>
+  </div>
+</div>
+
+
+
+
+<h2 style="color:Black;">Statistics</h2>
+<img src="../static/44.PNG" class="center">
+
+
+<div class="w3-container w3-teal">
+
+</div>
+
+<div class="w3-content">
+
+<div class="w3-row w3-margin">
+
+<div class="w3-third">
+  <img src="../static/1.PNG" style="width:100%;min-height:200px">
+</div>
+<div class="w3-twothird w3-container">
+  <h2>Vision</h2>
+  <p style="text-align:justify">
+  To facilitate transformation of students into good human beings, responsible citizens and competent professionals, focusing on the assimilation, generation and dissemination of knowledge.
+  </p>
+</div>
+
+</div>
+<div class="w3-row w3-margin">
+
+<div class="w3-third">
+  <img src="../static/2.PNG" style="width:100%;min-height:200px">
+</div>
+<div class="w3-twothird w3-container">
+  <h2>Mission</h2>
+  <p style="text-align:justify">
+  Impart quality education to meet the needs of profession and society, and achieve excellence in teaching-learning and research.</p>
+  <p style="text-align:justify">Attract and develop talented and committed human resources, and provide an environment conducive to innovation, creativity, team-spirit and entrepreneurial leadership.</p>
+  <p style="text-align:justify">Facilitate effective interactions among faculty and students, and foster networking with alumni, industries, institutions and other stake-holders.</p>
+  <p style="text-align:justify">Practice and promote high standards of professional ethics, transparency and accountability.</P>
+  
+  </p>
+</div>
+
+</div>
+<div class="w3-row w3-margin">
+
+<div class="w3-third">
+  <img src="../static/3.PNG" style="width:100%;min-height:200px">
+</div>
+<div class="w3-twothird w3-container">
+  <h2>History</h2>
+  <p style="text-align:justify" >National Institute of Technology Karnataka, Surathkal is located in Mangalore City, Karnataka State, India. The Institute was established as Karnataka Regional Engineering College (KREC) in 1960, and upgraded as National Institute of Technology Karnataka (NITK) in 2002</p>
+   <p style="text-align:justify">Mangalore is the headquarters of the coastal district of Dakshina Kannada, and boasts an important centre of education, business and trade in the state. Sri. U. Srinivasa Mallya, a visionary and a philanthropist, contributed immensely to the development of the coastal region of Karnataka, and his effort towards establishment of KREC (now NITK) is the most significant one. In recognition of his role as the founder and architect of the institute, the campus premises is named after him as Srinivasnagar.</p>
+  </p>
+</div>
+</div>
+</div>
+
+
+
+
+</div>
+</div>
+
+</body>

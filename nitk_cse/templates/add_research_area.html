@@ -1,0 +1,77 @@
+<html>
+<head>
+<style>
+
+body{background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-purple-vertical-stripes-frosted-simple-atmospheric-background-image_70163.jpg")}
+
+.class1
+{
+fieldset{background-color:white;}
+legend{background-color:gray;color:white;padding 5px 10px;}
+</style>
+
+<title>add news</title>
+</head>
+
+<body>
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div>
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Add Research Area</legend>
+<div class="class1">
+            {{ form.title.label(class="form-control-label")}}
+
+            {% if form.title.errors %}
+        
+                        {{ form.title(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.title.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+        
+                        </div>
+            {% else %}
+        
+                        {{ form.title(class="form-control form-control-lg is-valid") }}
+        
+            {% endif %}
+            <br>
+            {{ form.submit(class="btn btn-outline-info")}}
+        </fieldset>
+    </form>
+<div>
+
+   <div>
+   <br><br>
+
+
+<div>
+    The active areas of research in the department are: <br>
+    {% for area in areas %}   
+<h4>
+     <a href="/edit_area/{{ area.id }}" class="btn btn-outline-secondary btn-sm">{{ area.title }}</a>&nbsp &nbsp
+ 
+       
+       <a href="/Delete/{{ area.id }}" class="btn btn-outline-secondary btn-sm"><button>Delete</button></a><br>
+    {% endfor %}
+</div>
+
+
+
+</div>
+<br><br>
+<button><a href="{{ url_for('admin') }}"><< Admin Dashboard</a> </button>
+</body>
+</html>

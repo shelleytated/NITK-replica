@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+{% block content %}
+<br>
+<div class="container">
+    <h3>All Consultancies : </h3> <br>
+    <div class="container">
+        <table border="1" style="padding: 20px; border-spacing: 5px;">
+            <tr>
+                <th style="padding: 20px; ">Sr. No.</th>
+                <th style="padding: 20px; ">Title of Consultancy</th>
+                <th style="padding: 20px; ">Name of the Guide/ Investigator</th>
+                <th style="padding: 20px; ">Funding Agency </th>
+                <th style="padding: 20px; ">Name of the Student involved</th>
+                <th style="padding: 20px; ">Status/ Amt.</th>
+                <th style="padding: 20px; ">Year</th>
+            </tr>
+            {% for pr in projects%}
+                <tr>
+                    <td style="padding: 20px; ">{{ loop.index }}</td>
+                    <td style="padding: 20px; ">{{ pr.title }}</td>
+                    <td style="padding: 20px; ">{{ pr.guide }}</td>
+                    <td style="padding: 20px; ">{{ pr.agency }}</td>
+                    <td style="padding: 20px; ">{{ pr.student }}</td>
+                    <td style="padding: 20px; ">{{ pr.status }}</td>
+                    <td style="padding: 20px; ">{{ pr.year }}</td>
+                </tr>
+                
+            {% endfor %}
+        </table>
+    
+    </div>
+  <br>  
+</div>
+
+{% endblock content %}

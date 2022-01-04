@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>
+</title>
+</head>
+<body>
+$( document ).ready(function() {
+    $( 'a.delete' ).click( function( e ) {
+        e.preventDefault();
+        $.ajax({
+            url: '/delete',
+            data: $('form').serialize(),
+            type: 'POST',
+            success: function(response) {
+                console.log(response);
+            },
+            error: function(error) {
+                console.log(error);
+            }
+        });
+    });
+});
+
+<form action="/delete" method="post" role="form">
+    <input type="hidden" name="id" value="{{row['id']}}">
+    <a href="#" class="btn btn-danger delete">DELETE</a>
+</form>
+</body>
+</html>

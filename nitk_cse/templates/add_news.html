@@ -1,0 +1,104 @@
+<html>
+<head>
+<style>
+
+body{background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-purple-vertical-stripes-frosted-simple-atmospheric-background-image_70163.jpg")}
+
+.class1
+{
+fieldset{background-color:white;}
+legend{background-color:gray;color:white;padding 5px 10px;}
+</style>
+
+<title>add news</title>
+</head>
+
+<body>
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+
+<div>
+    <form action="" method="POST">
+        {{ form.hidden_tag() }}
+        <fieldset>
+            <legend>Add News</legend>&nbsp
+            <div class="class1">
+            {{ form.news.label(class="form-control-label")}}
+
+
+
+            {% if form.news.errors %}
+        
+                        {{ form.news(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.news.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+        
+                        </div>
+            {% else %}
+        
+                        {{ form.news(class="form-control form-control-lg is-valid") }}
+        
+            {% endif %}
+            <br>
+            {{ form.link.label(class="form-control-label")}}
+            {% if form.link.errors %}
+        
+                        {{ form.link(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.link.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+        
+                        </div>
+            {% else %}
+        
+                        {{ form.link(class="form-control form-control-lg is-valid") }}
+        
+            {% endif %}
+            <br>
+            {{ form.link_text.label(class="form-control-label")}}
+            {% if form.link_text.errors %}
+        
+                        {{ form.link_text(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in form.link_text.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+        
+                        </div>
+            {% else %}
+        
+                        {{ form.link_text(class="form-control form-control-lg is-valid") }}
+        
+            {% endif %}
+            <br>
+            {{ form.submit(class="btn btn-outline-info")}}
+        </fieldset><br>
+    </form>
+<div>
+<div>
+   <br><br>
+{% for new in news %}
+<h4>
+
+{{new.news}} <a href="/delete/{{new.id}}" class="btn btn-outline-secondary btn-sm"><button>Delete</button></a>&nbsp
+             <a href="/update/{{new.id}}" class="btn btn-outline-secondary btn-sm"><button>Update</button></a>
+</h4>
+{% endfor %}
+</div>
+
+
+</div>
+<br><br>
+<button><a href="{{ url_for('admin') }}"><< Admin Dashboard</a> </button>
+</body>
+</html>

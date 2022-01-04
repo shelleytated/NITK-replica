@@ -1,0 +1,56 @@
+<html>
+<head>
+<style>
+
+body{background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-purple-vertical-stripes-frosted-simple-atmospheric-background-image_70163.jpg")}
+
+.class1
+{
+fieldset{background-color:white;}
+legend{background-color:gray;color:white;padding 5px 10px;}
+</style>
+
+<title>add news</title>
+</head>
+
+<body>
+
+
+{% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        {% for category, message in messages %}
+            <div class="alert alert-{{ category }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
+{% endwith %}
+<div>
+<div class="class1">
+    Faculty : <br>
+    {% for faculty in f %}   
+        {{ faculty.name }} <br>
+    {% endfor %}
+</div>
+<a href="{{ url_for('add_faculty',id=id) }}"><button>Add Faculty</button></a><br><br>
+<div>
+    Journals : <br>
+    {% for journal in j %}   
+        {{ journal.name }} <br>
+    {% endfor %}
+</div>
+<a href="{{ url_for('add_journal',id=id) }}"><button>Add Journal</button></a><br>
+<br>
+<div>
+    Conference : <br>
+    {% for conf in c %}   
+        {{ conf.name }} <br>
+    {% endfor %}
+</div>
+</div>
+<a href="{{ url_for('add_conf',id=id) }}"><button>Add Conference</button></a>
+
+<br><br>
+<button><a href="{{ url_for('admin') }}"><< Admin Dashboard</a> </button>
+</body>
+</html>

@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8b5e0cd93a.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='icon.png')}}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}" type="text/css"> 
+    {% if title %}
+        <title>{{ title }} | Computer Science and Engineering</title>
+    {% else %}
+        <title>Home | Computer Science and Engineering</title>
+    {% endif %}    
+<style>
+a.active
+{
+background-color: #04AA6D;
+  color: white;
+
+}
+a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+  width=100%;
+}
+</style>
+
+</head>
+
+
+
+<body background="https://www.nitk.ac.in/design-system/Gallery/MB.jpg" style="background-repeat:no-repeat; background-size: 100% 40%;" >
+
+<h1><center><b>Admin</b></center></h1>
+
+<ul style="list-style-type: none; margin: 0;padding: 0;width: 300px;background-color: #black;">
+  <li><a class="active" href="{{ url_for('add_news')}}" style:"display: block;color: #000;padding: 10px 16px;text-decoration: none"><button type="button" class="btn btn-secondary">Add News and Upcoming Events</button></a></li><br>
+  <li><a href="{{ url_for('add_research_area')}}" style:"display: block;color: #000;padding: 10px 16px;text-decoration: none"><button type="button" class="btn btn-secondary" width=50px>Add Research Areas</button></a></li><br>
+  <li><a href="{{ url_for('add_professors')}}" style:"display: block;color: #000;padding: 10px 16px;text-decoration: none;"><button type="button" class="btn btn-secondary">Add Professors</button></a></li><br>
+  <li><a href="{{ url_for('add_rdproject')}}" style:"display: block;color: #000;padding: 10px 16px;text-decoration: none;"><button type="button" class="btn btn-secondary">Add Research and Development Project</button></a></li><br>
+  <li><a href="{{ url_for('add_consultancy')}}" style:"display: block;color: #000;padding: 10px 16px;text-decoration: none;"><button type="button" class="btn btn-secondary">Add Consultancy</button></a></li><br>
+</ul>
+<div class="main-content">
+        {% block content %}{% endblock %}
+    </div>
+    
+    <div class="footer">
+        <div class="footer-top">
+            <div class="contact">
+                <h4>CONTACT US</h4>
+                <p><span> Dr. Shashidhar G Koolagudi </span></p>
+                <p>Head of the Department</p> 
+                <p>Department of CSE, NITK, Surathkal</p>
+                <p>P. O. Srinivasnagar, Mangalore - 575 025</p>
+                <p>India.</p>
+                    
+                <p>Hot line: +91-0824-2474053</p>
+                <p>Email: <span><a href="#">hodcse@nitk.ac.in</a></span> ,
+                          <span><a href="#">hodcse@nitk.edu.in</a></span>
+                </p>    
+            </div>
+            <div class="connect">
+                <h4>CONNECT WITH US</h4>
+                <P>We're on Social Networks. Follow us & get in touch.</P>
+                <a href="#"><i class="icon fab fa-twitter-square"></i></a>
+                <a href="#"><i class="icon fab fa-facebook-square"></i></a>
+                <a href="#"><i class="icon fab fa-google-plus-square"></i></a>
+                <a href="#"><i class="icon fas fa-rss-square"></i></a>
+                <a href="#"><i class="icon fab fa-vimeo"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-section quick">
+                <h4>QUICK LINKS</h4>
+                <ul>
+                    <li><a href="http://127.0.0.1:5000/"><i class="fas fa-angle-right"></i>Programmes</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><i class="fas fa-angle-right"></i>Courses</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><i class="fas fa-angle-right"></i>People</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><i class="fas fa-angle-right"></i>Research</a></li>
+                    <li><a href="http://127.0.0.1:5000/"><i class="fas fa-angle-right"></i>Facilities</a></li>
+                    <li><a href="https://www.nitk.ac.in/search?search=telephone+directory"><i class="fas fa-angle-right"></i>Telephone Directory</a></li>
+                </ul>    
+            </div>
+            <div class="footer-section general">
+                <h4>GENERAL LINKS</h4>
+                <ul>
+                    <li><a href="http://ws2014.cs.cmu.edu/"><i class="fas fa-angle-right"></i>CMU-NITK Winter School</a></li>
+                    <li><a href="https://iris.nitk.ac.in/hrms"><i class="fas fa-angle-right"></i>IRIS Portal</a></li>
+                    <li><a href="http://intranet.nitk.ac.in/"><i class="fas fa-angle-right"></i>Intranet</a></li>
+                    <li><a href="http://library.nitk.ac.in/joomla/"><i class="fas fa-angle-right"></i>Library</a></li>
+                </ul>
+            </div>
+            <div class="footer-section doctoral">
+                <h4>PH.D STUDENTS</h4>
+                <ul>
+                    <li><a href="https://www.nitk.ac.in/"><i class="fas fa-angle-right"></i>Announcements</a></li>
+                    <li><a href="http://cse.nitk.ac.in/courses/doctoral"><i class="fas fa-angle-right"></i>Courses</a></li>
+                    <li><a href="http://cse.nitk.ac.in/facilities/lab"><i class="fas fa-angle-right"></i>Labs</a></li>
+                    <li><a href="https://www.nitk.ac.in/PHD_Research_Programmes"><i class="fas fa-angle-right"></i>Scholarships</a></li>
+                </ul>
+            </div>
+            <div class="footer-section postgraduate">
+                <h4>POSTGRADUATES</h4>
+                <ul>
+                    <li><a href="https://www.nitk.ac.in/document/attachments/1609/Details_of_Minor_course_for_2019_Batch.pdf"><i class="fas fa-angle-right"></i>Announcements</a></li>
+                    <li><a href="http://cse.nitk.ac.in/courses/pg"><i class="fas fa-angle-right"></i>PG Courses</a></li>
+                    <li><a href="http://cse.nitk.ac.in/facilities/lab"><i class="fas fa-angle-right"></i>Labs</a></li>
+                    <li><a href="https://www.nitk.ac.in/mtechresearchprog"><i class="fas fa-angle-right"></i>Stipends</a></li>
+                </ul>
+            </div>
+            <div class="footer-section undergraduate">
+                <h4>UNDERGRADUATES</h4>
+                <ul>
+                    <li><a href="https://www.nitk.ac.in/document/attachments/1609/Details_of_Minor_course_for_2019_Batch.pdf"><i class="fas fa-angle-right"></i>Announcements</a></li>
+                    <li><a href="http://cse.nitk.ac.in/courses/ug"><i class="fas fa-angle-right"></i>UG Courses</a></li>
+                    <li><a href="http://cse.nitk.ac.in/facilities/lab"><i class="fas fa-angle-right"></i>Labs</a></li>
+                    <li><a href="https://iris.nitk.ac.in/hrms/placement"><i class="fas fa-angle-right"></i>Opportunities</a></li>
+                </ul>
+            </div>
+            <div class="footer-section opening">
+                <h4>DEPARTMENT OPENINGS</h4>
+                <ul>
+                    <li><a href="https://www.nitk.ac.in/document/attachments/1675/Adver-Intel-ResearchFellow.pdf"><i class="fas fa-angle-right"></i>Intel Reasearch Fellow</a></li>
+                    <li><a href="https://www.ncs.gov.in/Pages/default.aspx"><i class="fas fa-angle-right"></i>National Career Service Portal</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-last">
+            <div class="here">
+            <h6>{% if title %}
+                You are here <i class="fas fa-angle-double-right"></i> {{ title }}
+            {% else %}
+                You are here <i class="fas fa-angle-double-right"></i> Home
+            {% endif %} </h6>
+            </div>
+            <div class="goto">
+                <h6>Go to <i class="fas fa-angle-double-right"></i> <a href="{{ url_for('home') }}">Home</a></h6>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

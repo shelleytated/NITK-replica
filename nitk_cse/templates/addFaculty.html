@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+
+body{background-image:url("https://png.pngtree.com/thumb_back/fh260/background/20190223/ourmid/pngtree-blue-purple-vertical-stripes-frosted-simple-atmospheric-background-image_70163.jpg")}
+
+.class1
+{
+fieldset{background-color:white;}
+legend{background-color:gray;color:white;padding 5px 10px;}
+</style>
+
+<title>add news</title>
+</head>
+
+<body>
+
+<div>
+    <form action="" method="POST">
+        {{ ff.hidden_tag() }}
+        <fieldset>
+            <legend>Add Faculty</legend>
+            <div class="class1">
+            {{ ff.name.label(class="form-control-label")}}
+
+            {% if ff.name.errors %}
+        
+                        {{ ff.name(class="form-control form-control-lg is-invalid") }}
+                        <div class="invalid-feedback">
+                            {% for error in ff.name.errors %}
+                                <span> {{ error }} </span>
+                            {% endfor %}
+        
+                        </div>
+            {% else %}
+        
+                        {{ ff.name(class="form-control form-control-lg is-valid") }}
+        
+            {% endif %}
+            <br>
+            {{ ff.submit(class="btn btn-outline-info")}}
+        </fieldset>
+    </form>
+</div>
+</div>
+<br><br>
+<button><a href="{{ url_for('admin') }}"><< Admin Dashboard</a> </button>
+</body>
+</html>
